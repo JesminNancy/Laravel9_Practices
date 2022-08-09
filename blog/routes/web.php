@@ -3,5 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::view("store", "storeuser");
-Route::post('/storem', [UserController::class, 'StoreM']);
+Route::get('/', function () {
+  return view('welcome');
+});
+
+Route::get('/users',[UserController::class,'index']);
+Route::get('/fakeapi',[UserController::class,'getData']);
