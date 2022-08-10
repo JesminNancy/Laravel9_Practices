@@ -7,13 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
-    function index(){
-      $data= Http::get('https://reqres.in/api/users?page=1');
-      return view('users', ['data'=>$data['data']]);
+   function testRequest(Request $request){
+      return $request->input();
    }
-
- function getData(){
-     $data= Http::get('https://jsonplaceholder.typicode.com/posts')->collect();
-     return view('fakeapi', ['data'=>$data]);
-  }
 }

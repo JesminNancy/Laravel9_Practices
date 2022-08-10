@@ -4,29 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>API FETCH</title>
+    <title>Http Request</title>
 </head>
 <body>
-    <h1>Get API</h1>
-    <table border="1">
-        <tr>
-            <td>ID</td>
-            <td>Email</td>
-            <td>First_Name</td>
-            <td>Last_Name</td>
-            <td>Profile_Pic</td>
-        </tr>
-
-        @foreach ($data as $data)
-            <tr>
-                <td>{{ $data['id'] }}</td>
-                <td>{{ $data['email'] }}</td>
-                <td>{{ $data['first_name'] }}</td>
-                <td>{{ $data['last_name'] }}</td>
-                <td><img src="{{ $data['avatar'] }}" alt="" /></td>
-            </tr>
-        @endforeach
-    </table>
-
+    
+<h1>User Login</h1>
+<form action="users" method="POST">
+    @csrf
+    <input type="text" name="user" placeholder="Enter Your Name"> <br><br>
+    <input type="password" name="password" placeholder="Enter Your Password"> <br><br>
+    <button type="submit">Login</button>
+</form>
 </body>
 </html>

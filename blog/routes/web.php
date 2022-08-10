@@ -7,5 +7,5 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('/users',[UserController::class,'index']);
-Route::get('/fakeapi',[UserController::class,'getData']);
+Route::view('login','users');
+Route::post('/users',[UserController::class,'testRequest']);
