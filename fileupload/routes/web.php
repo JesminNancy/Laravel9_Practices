@@ -24,3 +24,7 @@ Route::post('add',[MemberController::class,'addData']);
 
 //Delete Data in Database Table
 Route::get('delete/{id}',[MemberController::class,'delete']);
+
+//Update Data in Database Table
+Route::get('edit/{id}',[MemberController::class,'getData']);
+Route::post('edit',[MemberController::class,'update']);
