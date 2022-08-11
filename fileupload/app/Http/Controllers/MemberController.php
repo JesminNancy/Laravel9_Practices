@@ -15,4 +15,10 @@ class MemberController extends Controller
         $member->save();
         return redirect('add');
    }
+
+   function delete($id){
+    $data=Member::find($id);
+    $data->delete();
+    return redirect('list');
+   }
 }

@@ -8,7 +8,8 @@ use App\Models\Member;
 class UserController extends Controller
 {
     function showData(){
-        $data =member::paginate(5);
+        // $data =member::paginate(5);
+        $data =member::all();
         return view('list',['members'=>$data]);
     }
 }
