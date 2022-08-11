@@ -18,6 +18,9 @@ Route::post('upload',[UploadController::class,'FileUpload']);
 //Show Data in Database Table
 Route::get('list',[UserController::class,'showData']);
 
-// Add Member....
+// Add Member in Database Table
 Route::view('add','addmember');
 Route::post('add',[MemberController::class,'addData']);
+
+//Delete Data in Database Table
+Route::get('delete/{id}',[MemberController::class,'delete']);
