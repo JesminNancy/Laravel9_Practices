@@ -6,7 +6,7 @@
     <td>Email</td>
     <td>City</td>
   </tr>
-  @foreach ($member as $member)
+  @foreach ($members as $member)
       <tr>
         <td>{{ $member->id }}</td>
         <td>{{ $member->name }}</td>
@@ -15,3 +15,11 @@
       </tr>
   @endforeach
 </table>
+<div>
+  {{ $members->links() }}
+</div>
+<style>
+  .w-5{
+    display: none;
+  }
+</style>
