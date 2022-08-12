@@ -11,3 +11,7 @@ Route::get('/', function () {
 
 Route::get('/employee', [EmployeeController::class,'index']);
 Route::get('/member', [MemberController::class,'updateMut']);
+
+// Query Builder....
+Route::get('/list', [MemberController::class,'operations']);
+Route::get('/memberlist', [MemberController::class,'InsertUpdateDelete']);
