@@ -7,7 +7,11 @@ use App\Models\Member;
 
 class MemberController extends Controller
 {
-    function index(){
-       return Member::find(3)->companyData;
-    }
+    // function index(){
+    //    return Member::find(3)->companyData;
+    // }
+
+    function ShowData(){
+        return Member::find(1)->getDevice;
+     }
 }

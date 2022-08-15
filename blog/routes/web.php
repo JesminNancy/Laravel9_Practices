@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get('list',[Employeeontroller::class,'getData']);
 Route::get('data',[MemberController::class,'index']);
+Route::get('datadevice',[MemberController::class,'ShowData']);
