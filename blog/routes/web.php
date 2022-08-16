@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Employeeontroller;
 use App\Http\Controllers\MemberController;
 use Illuminate\Support\Str;
+use App\Http\Controllers\DeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,5 @@ Route::get('/', function () {
 Route::get('list',[Employeeontroller::class,'getData']);
 Route::get('data',[MemberController::class,'index']);
 Route::get('datadevice',[MemberController::class,'ShowData']);
+
+Route::get('device/{key:name}',[DeviceController::class,'Data']);
