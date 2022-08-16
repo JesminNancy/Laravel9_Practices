@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Employeeontroller;
-use App\Http\Controllers\MemberController;
-use Illuminate\Support\Str;
-use App\Http\Controllers\DeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,24 +13,6 @@ use App\Http\Controllers\DeviceController;
 |
 */
 
-
-$string="we are learning laravel 9";
-// $string =Str::ucfirst($string);
-// $string=Str::replaceFirst('We', 'They', $string);
-// $string=Str::camel($string);
-
-$string=Str::of($string)
-            ->ucfirst($string)
-            ->replaceFirst('We', 'They', $string)
-            ->camel($string);
-echo $string;
-
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('list',[Employeeontroller::class,'getData']);
-Route::get('data',[MemberController::class,'index']);
-Route::get('datadevice',[MemberController::class,'ShowData']);
-
-Route::get('device/{key:name}',[DeviceController::class,'Data']);
