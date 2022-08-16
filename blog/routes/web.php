@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Employeeontroller;
 use App\Http\Controllers\MemberController;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,18 @@ use App\Http\Controllers\MemberController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+$string="we are learning laravel 9";
+// $string =Str::ucfirst($string);
+// $string=Str::replaceFirst('We', 'They', $string);
+// $string=Str::camel($string);
+
+$string=Str::of($string)
+            ->ucfirst($string)
+            ->replaceFirst('We', 'They', $string)
+            ->camel($string);
+echo $string;
 
 Route::get('/', function () {
     return view('welcome');
