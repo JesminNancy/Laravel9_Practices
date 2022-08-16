@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('add',[DeviceController::class,'addData']);
 Route::put('update',[DeviceController::class,'update']);
+Route::delete('delete/{id}',[DeviceController::class,'delete']);
