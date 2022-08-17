@@ -46,4 +46,13 @@ class DeviceController extends Controller
             return ["result"=>"Data Delete failed"];
         } 
     }
+
+    function search($name){
+        $result= Device::where("name", "like","%" .$name."%")->get();
+        if(count($result)>0){
+            return $result;
+        }else{
+            return ["result"=>"Data not Found"];
+        }
+    }
 }
